@@ -32,6 +32,7 @@ public class Cones : MonoBehaviour
     {
         
         Vector3 currentPosition = transform.position;
+
         timer -= Time.deltaTime;
         if (timer <= 0)
         {
@@ -48,26 +49,35 @@ public class Cones : MonoBehaviour
     }
     void OnTriggerEnter(Collider obj)
     {
+        //the collided with is the soccer ball 
         GameObject collidedWith = obj.gameObject;
-
+        //this would decrement the current score by 100 when the cone would be touched 
         cscore.current -= 100;
         cscore.setText();
+        //this would increment amount of times cone has been tocuhed 
         coneTouch += 1;
-
-
         
+        //if coneTouch is more than 3 times, which is the maximum amount that the cone can be touched 
         if (coneTouch >= coneMaxCountTouch)
         {
+          //this makes the cscore to be in the form a string in order for the current score to be shown 
             Debug.Log(cscore.ToString());
+            //this would reload the scene to restart the game 
             SceneManager.LoadScene("MakeItToNet");
+            //this would capture the new best score 
             BestScore.TRY_SET_BEST_SCORE(cscore.current);
         }
+        //this calls the resetPosition function everytime 
         resetPosition();
     }
     void resetPosition()
     {
+        //this is the random position that the cone would be in before it would start sliding where this contains the minimum 
+        //range and the maximum range. 
         int r = Random.Range(-5, 5);
+        //this would set the position of the cone at what r is initilaized to as the range for x-axis, it would be 0 for y to always be on the field and depth would go as far as 4 for z. 
         this.transform.position = new Vector3(r, 0f, 4f);
+        //this is the timer for everytime the cone reappears 
         timer = 0.2f;
     }
 }
