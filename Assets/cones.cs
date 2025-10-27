@@ -30,18 +30,23 @@ public class Cones : MonoBehaviour
 
     void Update()
     {
-        
+        //this would take in the currentPosition of cone and insitilaize it to the transform position of the cone to reterive the most current position of it 
+
         Vector3 currentPosition = transform.position;
 
+        //this is timer that was intialized to 3f and it would decrement to reach zero
         timer -= Time.deltaTime;
+        //condition that checks if time is less than or equal to zero and if so, it would 
         if (timer <= 0)
         {
+            //enable the box collider 
             this.GetComponent<BoxCollider>().enabled = true;
             currentPosition.z += -1*(movementOfItem * Time.deltaTime);
             transform.position = currentPosition;
-
+            //if the current position at z is less than the camera position
             if (currentPosition.z < cameraBoundary)
             {
+                //then call the resetPosition function to reset the position of the cone 
                 resetPosition();
             }
         }
@@ -76,6 +81,7 @@ public class Cones : MonoBehaviour
         //range and the maximum range. 
         int r = Random.Range(-5, 5);
         //this would set the position of the cone at what r is initilaized to as the range for x-axis, it would be 0 for y to always be on the field and depth would go as far as 4 for z. 
+        //this would be the starting position that it would move back to 
         this.transform.position = new Vector3(r, 0f, 4f);
         //this is the timer for everytime the cone reappears 
         timer = 0.2f;
