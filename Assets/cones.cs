@@ -24,7 +24,9 @@ public class Cones : MonoBehaviour
 
     private void Start()
     {
-        //this would reterieve the current score of the game from the start of the game 
+
+        //this would be a connect the CurrentScore script in order to know the current score from the start and update it, so it is the latest score yet
+
         cscore = score.GetComponent<CurrentScore>();
     }
 

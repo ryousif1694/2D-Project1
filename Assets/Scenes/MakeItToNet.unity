@@ -337,6 +337,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3962168960273006293, guid: c3ae2779724c97f468ae34dd3c28a524, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3962168960273006293, guid: c3ae2779724c97f468ae34dd3c28a524, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3962168960273006293, guid: c3ae2779724c97f468ae34dd3c28a524, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3962168960273006293, guid: c3ae2779724c97f468ae34dd3c28a524, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -543,8 +555,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -568,13 +580,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 625477976}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.078459114, y: 0, z: 0, w: 0.99691737}
+  m_LocalPosition: {x: 0, y: 4.19, z: -12.15}
+  m_LocalScale: {x: 10, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 9, y: 0, z: 0}
 --- !u!65 &625477981
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -631,8 +643,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -245, y: 40}
-  m_SizeDelta: {x: 300, y: 400}
+  m_AnchoredPosition: {x: -245, y: 220}
+  m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &794520860
 MonoBehaviour:
@@ -763,7 +775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1570f767d339a334d801f7efcc5b11da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreGO: {fileID: 794520858}
+  score: {fileID: 794520858}
   conePre: {fileID: 1338557731}
   sound: {fileID: 935802169}
 --- !u!54 &935802164
@@ -909,12 +921,9 @@ MonoBehaviour:
   timer: 5
   movementOfItem: 7
   conePre: {fileID: 3352607148033346504, guid: 1c394aae34d7e8f4e857e8cb5cc8b316, type: 3}
-  trophyPre: {fileID: 4065030651490896660, guid: f40a7c59a7d3486439e338f1fd7f1730, type: 3}
-  changing: 2
-  itemExist: 2
   coneTouch: 0
   coneMaxCountTouch: 3
-  scoreGO: {fileID: 794520858}
+  score: {fileID: 794520858}
   cameraBoundary: -10
 --- !u!1001 &1361990689
 PrefabInstance:
@@ -1071,11 +1080,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 7
-  conePre: {fileID: 1338557731}
   trophyPre: {fileID: 1570014705}
-  changing: 2
-  itemExist: 2
-  scoreGO: {fileID: 794520858}
+  score: {fileID: 794520858}
   trophyTouch: 0
   cameraBoundary: -10
   movementOfItem: 7
@@ -1183,7 +1189,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -245, y: 270}
-  m_SizeDelta: {x: 300, y: 50}
+  m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2108855276
 MonoBehaviour:

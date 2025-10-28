@@ -115,12 +115,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3352607148033346504}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3475cec7e6e6e2548b694abe0bab53d4, type: 3}
+  m_Script: {fileID: 11500000, guid: f6ad975ec0712dd47a826e8f563916c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementOfCone: 7
-  conePre: {fileID: 0}
-  coneOccurance: 15
-  changing: 0.5
-  coneExist: 3
-  backAndForth: 17
+  timer: 3
+  movementOfItem: 3
+  conePre: {fileID: 3352607148033346504}
+  coneTouch: 0
+  coneMaxCountTouch: 3
+  score: {fileID: 0}
+  cameraBoundary: -10

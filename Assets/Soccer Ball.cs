@@ -6,7 +6,7 @@ using UnityEngine;
 public class SoccerBall : MonoBehaviour
 {
    CurrentScore cscore;
-    public GameObject scoreGO;
+    public GameObject score;
    
     public GameObject conePre;
    
@@ -14,7 +14,7 @@ public class SoccerBall : MonoBehaviour
 
     void Start()
    {
-     cscore = scoreGO.GetComponent<CurrentScore>();
+     cscore = score.GetComponent<CurrentScore>();
         Debug.Log(cscore.ToString());
     }
 
