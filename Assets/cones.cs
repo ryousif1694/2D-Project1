@@ -39,9 +39,12 @@ public class Cones : MonoBehaviour
         //condition that checks if time is less than or equal to zero and if so, it would 
         if (timer <= 0)
         {
-            //enable the box collider 
+            //enable the box collider in order to find when the cone would collide with the ball 
             this.GetComponent<BoxCollider>().enabled = true;
+            //current position at the z axis is being incremented, but this incrementation is happening in the negative direction 
+            //this is to have the current position of the cone be closer to the player view. 
             currentPosition.z += -1*(movementOfItem * Time.deltaTime);
+            //this gives current position to transfrom position as an update 
             transform.position = currentPosition;
             //if the current position at z is less than the camera position
             if (currentPosition.z < cameraBoundary)
