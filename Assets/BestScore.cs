@@ -21,7 +21,7 @@ public class BestScore : MonoBehaviour
             //the integer value from best score would be reterieved by using getInt function of PlayerPrefs and stored into result 
                 result = PlayerPrefs.GetInt("BestScore");
             }
-            //this now sets the best score with the result 
+            //this now sets the best score with the result in which whenever there would be a result that appears, it would be set to PlayerPrefs for Best Score to have the new integer value result set
             PlayerPrefs.SetInt("BestScore", result);
         }
         static public int result{
@@ -33,8 +33,8 @@ public class BestScore : MonoBehaviour
                 point = value;
                 //this would the integer value that is set for best score for PlayerPrefs 
                 PlayerPrefs.SetInt("BestScore", value);
-                
-                Text.text = ("Best Score: " ) + value.ToString("#,0");
+                //this would use the Text component with text object to be insitialized to best score with the valuue that is converted to strings 
+                Text.text = ("Best Score: " ) + value.ToString();
             }
             get{
             //this would reterieve and rteurn the point there are 
