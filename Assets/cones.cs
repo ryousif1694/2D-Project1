@@ -63,6 +63,7 @@ public class Cones : MonoBehaviour
         GameObject collidedWith = obj.gameObject;
         //this would decrement the current score by 100 when the cone would be touched 
         cscore.current -= 100;
+        //this would use cscore object with the function call of setText for the function to be used where it woudl convert the current score to a string 
         cscore.setText();
         //this would increment amount of times cone has been tocuhed 
         coneTouch += 1;
