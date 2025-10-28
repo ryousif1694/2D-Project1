@@ -9,7 +9,7 @@ public class SoccerBall : MonoBehaviour
     public GameObject score;
    
     public GameObject conePre;
-   
+   //declaration of sound using AudioSource 
     public AudioSource sound;
 
     void Start()
