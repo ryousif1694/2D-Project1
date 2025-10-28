@@ -76,7 +76,7 @@ public class Cones : MonoBehaviour
             //this would reload the scene to restart the game 
             SceneManager.LoadScene("MakeItToNet");
             //this would capture the new best score 
-            BestScore.TRY_SET_BEST_SCORE(cscore.current);
+            BestScore.BestScoreAttempt(cscore.current);
         }
         //this calls the resetPosition function everytime 
         resetPosition();

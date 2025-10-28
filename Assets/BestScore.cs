@@ -11,38 +11,38 @@ public class BestScore : MonoBehaviour
     //this is the never changing score that would be 
     static private int point = 100;
  
-    public bool resetBestScore = false;
-    void Awake()
+    void Start()
         {
             //The component of the TextMeshProUGUI is assigned to Text object 
             Text = GetComponent<TextMeshProUGUI>();
-            //checks if the 
+            //checks if PlayerPrefs has best score reference occurs and if so 
             if (PlayerPrefs.HasKey("BestScore"))
             {
+            //the integer value from best score would be reterieved by using getInt function of PlayerPrefs and stored into result 
                 result = PlayerPrefs.GetInt("BestScore");
             }
+            //this now sets the best score with the result 
             PlayerPrefs.SetInt("BestScore", result);
         }
         static public int result{
-            get { 
-            //this would reterieve and rteurn the point there are 
-            return point;
-        }
-            private set
-            {
+          
+            private 
+
+            set{
                 //point would initialized to value where in set it contains the numbers that are given to point in a variable way 
                 point = value;
-                //this would use 
+                //this would the integer value that is set for best score for PlayerPrefs 
                 PlayerPrefs.SetInt("BestScore", value);
-
-                if (Text!= null)
-                {
-                    Text.text = "Best Score: " + value.ToString("#,0");
-                }
+                
+                Text.text = ("Best Score: " ) + value.ToString("#,0");
             }
-        }
+            get{
+            //this would reterieve and rteurn the point there are 
+            return point;
+            }
+    }
 
-        static public void TRY_SET_BEST_SCORE(int goalScore)
+        static public void BestScoreAttempt(int goalScore)
         {
         //this condition would check if the result is greater than the score that the player is aiming for called goalScore, then return
           if (result >= goalScore)

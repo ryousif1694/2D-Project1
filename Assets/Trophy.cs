@@ -64,7 +64,7 @@ public class Trophy : MonoBehaviour
         cscore.setText();
         trophyTouch += 1;
         //this is reterieving the new current score as the best score if possible 
-        BestScore.TRY_SET_BEST_SCORE(cscore.current);
+        BestScore.BestScoreAttempt(cscore.current);
        
         resetPosition();
     }
