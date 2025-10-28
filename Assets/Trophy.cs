@@ -22,7 +22,7 @@ public class Trophy : MonoBehaviour
     public float movementOfItem = 3f;
     Vector3 currentPosition;
 
-    
+
     private void Start()
     {
         //this is a reference to CurrentScore script to know the current score from the start and update it with the lastest version of it 
@@ -57,15 +57,14 @@ public class Trophy : MonoBehaviour
     {
        //the object that it is collided with is the soccer ball 
         GameObject collidedWith = obj.gameObject;
-        
-       //this would increment the current score by 100 each time the trophy is touched
+
+        //this would increment the current score by 100 each time the trophy is touched
         cscore.current += 100;
-     
+
         cscore.setText();
         trophyTouch += 1;
         //this is reterieving the new current score as the best score if possible 
-        BestScore.BestScoreAttempt(cscore.current);
-       
+        BestScore.BestScoreAttempt(cscore.current);       
         resetPosition();
     }
     void resetPosition()

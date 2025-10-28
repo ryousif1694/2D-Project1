@@ -8,7 +8,7 @@ public class SoccerBall : MonoBehaviour
    CurrentScore cscore;
     public GameObject score;
    
-    public GameObject conePre;
+    public GameObject item;
    //declaration of sound using AudioSource 
     public AudioSource sound;
 
@@ -34,22 +34,22 @@ public class SoccerBall : MonoBehaviour
         location.x = mousePos3D.x;
         //this is the soccer ball position intilaized to the new location 
         this.transform.position = location;
-        
-        //this checks if cone prefab and the soccer ball game object have the close z position values 
+
+        //this checks if trophy prefab and the soccer ball game object have the close z position values 
         //this would be done using the absolute value to make the distance always positive
-        //where "this" is the positon of the soccer ball that is being subtracted from the position of cone prefab at z axis 
-        //and this condition checks if that value subtracted is less than or equal to 0.01 to see that the distance ebtwene the objects is little 
-        if (Mathf.Abs(conePre.transform.position.z - this.transform.position.z)<=0.01f)
+        //where "this" is the positon of the soccer ball that is being subtracted from the position of trophy prefab or cones prefab at z axis 
+        //and this condition checks if that value subtracted is less than or equal to 1 to see that the distance between the objects is little 
+        if (Mathf.Abs(item.transform.position.z - this.transform.position.z )<= 1f)
         {
             //this is a AudioSource object named sound calling the built in play function to play that would be playing when the distance is small, which means that it almost collided 
             sound.Play();
-            Debug.Log("Cone passes ball");
+            Debug.Log("trophy hits ball");
 
         }
-        
+
 
     }
-   
+
 
 
 }
