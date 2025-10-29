@@ -41,7 +41,7 @@ public class SoccerBall : MonoBehaviour
         //and this condition checks if that value subtracted is less than or equal to 1 to see that the distance between the objects is little 
         if (Mathf.Abs(item.transform.position.z - this.transform.position.z )<= 1f)
         {
-            //this is a AudioSource object named sound calling the built in play function to play that would be playing when the distance is small, which means that it almost collided 
+            //it is an AudioSource object named sound calling the built in play function to play that would be playing when the distance is small, which means that it almost collided 
             sound.Play();
             Debug.Log("trophy hits ball");
 
