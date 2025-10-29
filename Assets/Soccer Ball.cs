@@ -35,7 +35,7 @@ public class SoccerBall : MonoBehaviour
         //this is the soccer ball position intilaized to the new location 
         this.transform.position = location;
 
-        //this checks if trophy prefab and the soccer ball game object have the close z position values 
+        //this checks if trophy or cone prefab and the soccer ball game object have the close z position values 
         //this would be done using the absolute value to make the distance always positive
         //where "this" is the positon of the soccer ball that is being subtracted from the position of trophy prefab or cones prefab at z axis 
         //and this condition checks if that value subtracted is less than or equal to 1 to see that the distance between the objects is little 
